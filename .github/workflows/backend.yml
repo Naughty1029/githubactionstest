@@ -1,7 +1,7 @@
 name: backend
 
 on:
-  push:
+  commit_comment:
     branches:
       - test01
 
@@ -9,4 +9,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo hello world test
+      - run: echo ${ vars.MY_HELLO }
