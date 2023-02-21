@@ -1,12 +1,13 @@
 name: CI
 on:
   push:
-    branches: [ "deve" ]
+    branches: [ "main" ]
   merge_group:
-    branches: [ "deve" ]
+    branches: [ "main" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{ vars.MY_HELLO }}
+      - run: echo "MASA"
